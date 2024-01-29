@@ -3,6 +3,7 @@ package com.request.counter.counter;
 import java.io.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -18,6 +19,8 @@ public class HelloServlet extends HttpServlet {
         response.setContentType("text/html");
         request.setAttribute("counter", this.cnt++);
         request.setAttribute("localDateTime", LocalDateTime.now());
+        request.setAttribute("localDate", LocalDate.now());
+        request.setAttribute("localTime", LocalTime.now());
         request.getRequestDispatcher("home.jsp").forward(request, response);
     }
 }

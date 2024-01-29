@@ -31,10 +31,20 @@
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Time</label>
+                <label for="exampleInputPassword1">Local Date Time</label>
                 <input type="text" value="${localDateTime}" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
-            <a href="${pageContext.request.contextPath}/hello"><button type="submit" class="btn btn-primary">Smash</button></a>
+            <div class="form-group">
+                <label for="exampleInputPassword2">Local Date</label>
+                <input type="text" value="${localDate}" class="form-control" id="exampleInputPassword2" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword3">Local Time</label>
+                <input type="text" value="${localTime}" class="form-control" id="exampleInputPassword3" placeholder="Password">
+            </div>
+            <div class="text-center">
+                <a href="${pageContext.request.contextPath}/hello"><button type="submit" class="btn btn-primary">Smash</button></a>
+            </div>
         </form>
     </div>
 
