@@ -9,14 +9,14 @@
 <body>
 
     <div class="text-center">
-        <h1><%= "Hello Home!" %>
+        <h1 style="color: <%= request.getAttribute("color") %>"><%= "Hello Home!" %>
         </h1>
         <br/>
 
 
-        <h3> Count is ${counter}</h3>
+        <h3 style="color: <%= request.getAttribute("color") %>"> Count is ${counter}</h3>
         <h1>
-            <h1 style="color: <%= (Integer)request.getAttribute("counter") > 10 ? "red" : "black" %>;">
+            <h1 style="color: <%= request.getAttribute("color") %>">
                 Count is: <%= request.getAttribute("counter") %>
             </h1>
         </h1>
@@ -42,8 +42,12 @@
                 <label for="exampleInputPassword3">Local Time</label>
                 <input type="text" value="${localTime}" class="form-control" id="exampleInputPassword3" placeholder="Password">
             </div>
+            <div class="form-group">
+                <label for="exampleInputPassword4">Formatted Local Date Time</label>
+                <input type="text" value="${formattedDate}" class="form-control" id="exampleInputPassword4" placeholder="Password">
+            </div>
             <div class="text-center">
-                <a href="${pageContext.request.contextPath}/hello"><button type="submit" class="btn btn-primary">Smash</button></a>
+                <a href="${pageContext.request.contextPath}/hello"><button type="submit" class="btn btn-<%= request.getAttribute("type") %>">Smash</button></a>
             </div>
         </form>
     </div>
